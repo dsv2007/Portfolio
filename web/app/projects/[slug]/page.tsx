@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
-import Reveal from "@/components/Reveal";
+import { ArrowLeft, ExternalLink, Code } from "lucide-react";import Reveal from "@/components/Reveal";
 import StatusBadge from "@/components/StatusBadge";
 import { getProject, getProjects } from "@/lib/content";
 
@@ -63,8 +62,7 @@ export default async function ProjectPage({ params }: Props) {
               rel="noopener noreferrer"
               className="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
             >
-              <Github className="h-4 w-4" /> Source code
-            </a>
+<Code className="h-4 w-4" /> Source code            </a>
           )}
           {!project.liveUrl && !project.repoUrl && (
             <p className="text-sm text-muted">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, ExternalLink, Code2 } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Code } from "lucide-react";
 import StatusBadge from "./StatusBadge";
 import type { Project } from "@/types/content";
 
@@ -64,7 +64,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-muted hover:text-fg"
           >
-            <Github className="h-4 w-4" /> Code
+            <Code className="h-4 w-4" /> Code
           </a>
         )}
       </div>
