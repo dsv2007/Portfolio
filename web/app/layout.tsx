@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import { getProfile } from "@/lib/content";
+import Navbar from "@/components/Navbar";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,8 +25,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={jakarta.variable}>
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+            <body>
+        <ThemeProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2"
+          >
+            Skip to content
+          </a>
+          <Navbar />
+          <div id="main">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );
