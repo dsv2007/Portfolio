@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
+/* Dark mode is controlled by a "dark" class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Design tokens: LIGHT ---------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f7f8fc;
+  --surface: #ffffff;
+  --surface-alt: #eef1f8;
+  --fg: #0f172a;
+  --muted: #475569;
+  --line: #d9deea;
+  --blue: #2563eb;
+  --violet: #7c3aed;
+  --cyan: #0891b2;
+  --glass: rgba(255, 255, 255, 0.7);
 }
 
+/* ---------- Design tokens: DARK ---------- */
+.dark {
+  --bg: #0b1020;
+  --surface: #121a30;
+  --surface-alt: #18223d;
+  --fg: #e6e9f5;
+  --muted: #9aa3bd;
+  --line: #26314f;
+  --blue: #3b82f6;
+  --violet: #8b5cf6;
+  --cyan: #22d3ee;
+  --glass: rgba(18, 26, 48, 0.6);
+}
+
+/* Makes the tokens usable as Tailwind classes:
+   bg-bg, bg-surface, text-fg, text-muted, border-line, text-blue ... */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-blue: var(--blue);
+  --color-violet: var(--violet);
+  --color-cyan: var(--cyan);
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- Reusable look-and-feel ---------- */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--blue), var(--violet), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Visible keyboard focus for accessibility */
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
