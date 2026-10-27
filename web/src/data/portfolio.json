@@ -101,7 +101,15 @@
   ],
 
   "certifications": [
-    { "title": "Cloud Computing", "issuer": "NPTEL", "date": null, "score": "78%", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "Cloud Computing", "issuer": "NPTEL", "date": null, "score": "78%", {
+  "title": "Cloud Computing",
+  "issuer": "NPTEL",
+  "date": null,
+  "score": "78%",
+  "file": "/certificates/nptel-cloud-computing.pdf",
+  "credentialId": null,
+  "verifyUrl": null
+}, "credentialId": null, "verifyUrl": null },
     { "title": "TechA Responsive Website Developer Certification", "issuer": "Infosys Springboard", "date": "2026-09-28", "file": null, "credentialId": null, "verifyUrl": null },
     { "title": "React Web Developer Certification", "issuer": "Infosys Springboard", "date": "2026-09-28", "file": null, "credentialId": null, "verifyUrl": null },
     { "title": "Cyber Security Fundamentals Certification", "issuer": "Infosys Springboard", "date": "2026-09-28", "file": null, "credentialId": null, "verifyUrl": null },
