@@ -1,0 +1,134 @@
+{
+  "_readme": "Single source of truth for the website and the Flutter app. Edit here only. null = not verified / not available yet (UI hides the link or shows a labelled placeholder).",
+  "profile": {
+    "name": "Santhivarshini D",
+    "handle": "dsv",
+    "headline": "Aspiring AI Engineer · Full-Stack & Flutter Developer",
+    "roles": ["Aspiring AI Engineer", "AI Application Developer", "React / Responsive Web Developer", "Flutter Mobile App Developer", "Cybersecurity Fundamentals Learner"],
+    "education": {
+      "degree": "B.Tech in Artificial Intelligence and Data Science",
+      "institution": "Karpagam Academy of Higher Education, Coimbatore, Tamil Nadu, India",
+      "expectedGraduation": "2028"
+    },
+    "intro": "I am an Artificial Intelligence and Data Science student passionate about building intelligent applications, responsive websites, and practical digital solutions. I enjoy using modern development technologies and AI-powered tools to transform ideas into useful web and mobile experiences. I am continuously improving my technical skills through projects, certifications, internships, and hands-on learning. I am open to suitable internships, freelance projects, collaborations, and opportunities to build impactful technology solutions.",
+    "availability": "Open to internships, freelance projects and collaborations.",
+    "photo": "assets/profile.jpg",
+    "resumeUrl": null,
+    "contact": { "email": null, "phone": null, "location": "Coimbatore, Tamil Nadu, India" },
+    "social": { "github": null, "linkedin": null }
+  },
+
+  "skills": [
+    { "category": "AI & Machine Learning", "items": [
+      { "name": "AI fundamentals", "level": "Familiar" },
+      { "name": "Machine Learning fundamentals", "level": "Familiar" },
+      { "name": "Python", "level": "Practiced" },
+      { "name": "TensorFlow", "level": "Project Experience" },
+      { "name": "Keras", "level": "Project Experience" },
+      { "name": "PyTorch", "level": "Exploring" },
+      { "name": "Scikit-learn", "level": "Exploring" },
+      { "name": "XGBoost", "level": "Exploring" },
+      { "name": "LightGBM", "level": "Exploring" },
+      { "name": "JAX", "level": "Exploring" } ] },
+    { "category": "Web Development", "items": [
+      { "name": "HTML", "level": "Practiced" }, { "name": "CSS", "level": "Practiced" },
+      { "name": "JavaScript", "level": "Practiced" }, { "name": "React", "level": "Project Experience" },
+      { "name": "Next.js", "level": "Project Experience" }, { "name": "TypeScript", "level": "Project Experience" },
+      { "name": "Tailwind CSS", "level": "Familiar" }, { "name": "Responsive Design", "level": "Practiced" } ] },
+    { "category": "Programming", "items": [
+      { "name": "Java", "level": "Beginner" },
+      { "name": "Data Structures & Algorithms (basics)", "level": "Familiar" },
+      { "name": "Go (fundamentals)", "level": "Beginner" },
+      { "name": "SQL", "level": "Familiar" } ] },
+    { "category": "Mobile Development", "items": [
+      { "name": "Flutter", "level": "In Progress" }, { "name": "Dart", "level": "In Progress" } ] },
+    { "category": "Backend & Database", "items": [
+      { "name": "REST APIs", "level": "Familiar" }, { "name": "Prisma ORM", "level": "Project Experience" },
+      { "name": "PostgreSQL", "level": "Familiar" }, { "name": "MySQL", "level": "Familiar" },
+      { "name": "Java Spring Boot", "level": "Exploring" }, { "name": "FastAPI", "level": "Exploring" },
+      { "name": "SQLAlchemy", "level": "Exploring" } ] },
+    { "category": "Cloud & Tools", "items": [
+      { "name": "AWS fundamentals", "level": "Familiar" }, { "name": "Git & GitHub", "level": "Practiced" },
+      { "name": "Vercel", "level": "Practiced" }, { "name": "Docker (foundations)", "level": "Beginner" },
+      { "name": "Jenkins / Maven (foundations)", "level": "Beginner" } ] },
+    { "category": "Cybersecurity", "items": [
+      { "name": "Cybersecurity fundamentals", "level": "Familiar" },
+      { "name": "Secure application concepts", "level": "Beginner" } ] }
+  ],
+
+  "projects": [
+    { "slug": "skillbridge-ai", "name": "SkillBridge AI", "status": "Completed",
+      "summary": "A personalized career and placement mentoring platform for engineering students.",
+      "problem": "Students often lack a clear view of their career goals and how to organise placement preparation.",
+      "features": ["Personalized career recommendations", "Skill-gap analysis", "3-level learning roadmaps", "Job application tracking", "Resume compliance checker", "Glassmorphism UI"],
+      "tech": ["Next.js (App Router)", "TypeScript", "Prisma ORM", "AWS Aurora PostgreSQL", "LocalStorage fallback"],
+      "role": "Designed and built the platform.", "cover": null, "liveUrl": null, "repoUrl": null },
+    { "slug": "novamind-cloud", "name": "NovaMind Cloud", "status": "Completed",
+      "summary": "Enterprise data integrity and system monitoring platform with an AI incident-response console.",
+      "problem": "Teams need a single view of system integrity and a faster way to respond to incidents.",
+      "features": ["Sentinel Command Center analytics (integrity SLA, latency, logs, alerts)", "Incident Response Copilot console", "Corruption Sandbox block-corruption simulator", "Fully responsive"],
+      "tech": ["Next.js 16", "React 19", "Vercel"],
+      "role": "Designed, built and deployed.", "cover": null, "liveUrl": "https://novamind-cloud.vercel.app", "repoUrl": null,
+      "_note": "Earlier brief called this a business-intelligence project; your latest description is monitoring/data integrity. Confirm which to publish." },
+    { "slug": "atomquest", "name": "AtomQuest Video Support Platform", "status": "Completed",
+      "summary": "Real-time, server-routed video support with text/file exchange, recording and telemetry, built for AtomQuest Hackathon 1.0 Grand Finale.",
+      "problem": "Support sessions need secure live video with shared context.",
+      "features": ["Server-routed media over Socket.io", "AR drawing overlay", "Client-side session recording to WebM", "15-second reconnect grace window"],
+      "tech": ["Node.js", "Express", "Socket.io", "React", "Vite"],
+      "role": "Built for the hackathon grand finale.", "cover": null, "liveUrl": null, "repoUrl": null },
+    { "slug": "agrovision-ai", "name": "AgroVision AI", "status": "Prototype",
+      "summary": "Plant disease classification using a trained machine learning model.",
+      "problem": "Early identification of plant disease classes from leaf images.",
+      "features": ["PlantVillage dataset exploration", "Trained Keras model with saved class names", "Prediction testing on disease classes"],
+      "tech": ["Python", "TensorFlow", "Keras"],
+      "role": "Model training and prediction testing.", "cover": null, "liveUrl": null, "repoUrl": null,
+      "disclaimer": "Development example only; not claimed as field-ready or universally accurate." },
+    { "slug": "student-council-evoting", "name": "Student Council E-Voting System", "status": "In Progress",
+      "summary": "An electronic voting system for student council elections.",
+      "problem": "Running student elections digitally.",
+      "features": [], "tech": ["Java", "Spring Boot", "HTML/CSS", "MySQL"],
+      "role": "TBD", "cover": null, "liveUrl": null, "repoUrl": null,
+      "_note": "List only features you have actually completed." },
+    { "slug": "bus-booking", "name": "Bus Booking System", "status": "Prototype",
+      "summary": "Demonstrates an online bus booking workflow.",
+      "problem": "", "features": [], "tech": [], "role": "TBD", "cover": null, "liveUrl": null, "repoUrl": null,
+      "_note": "Add verified features and tech." },
+    { "slug": "portfolio-app", "name": "Portfolio Mobile App", "status": "In Progress",
+      "summary": "Flutter Android version of this portfolio: profile, skills, projects and contact on mobile.",
+      "problem": "Make my profile easy to browse on a phone.",
+      "features": ["Native Flutter navigation", "Shared content with the website", "Light/dark theme"],
+      "tech": ["Flutter", "Dart"], "role": "Designed and built.", "cover": null, "liveUrl": null, "repoUrl": null }
+  ],
+
+  "certifications": [
+    { "title": "Cloud Computing", "issuer": "NPTEL", "date": null, "score": "78%", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "TechA Responsive Website Developer Certification", "issuer": "Infosys Springboard", "date": "2026-09-28", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "React Web Developer Certification", "issuer": "Infosys Springboard", "date": "2026-09-28", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "Cyber Security Fundamentals Certification", "issuer": "Infosys Springboard", "date": "2026-09-28", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "TechA Raspberry Pi (verify exact title)", "issuer": "Infosys Springboard", "date": null, "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "TechA Go Programming (verify exact title)", "issuer": "Infosys Springboard", "date": null, "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "Introduction to Generative AI", "issuer": "AWS Educate", "date": null, "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "Docker Foundations Professional Certificate", "issuer": "LinkedIn Learning / Docker", "date": "2026-09-07", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "Building Modern Projects with React", "issuer": "LinkedIn Learning", "date": "2026-09-07", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "Data Structures and Algorithms: The Complete Bootcamp", "issuer": "Udemy", "date": "2026-08-18", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "Generative AI for Beginners", "issuer": "Udemy", "date": "2026-08-18", "file": null, "credentialId": null, "verifyUrl": null },
+    { "title": "Responsible AI: Principles, Practices, and Applications", "issuer": "Udemy", "date": "2026-08-18", "file": null, "credentialId": null, "verifyUrl": null }
+  ],
+  "training": [
+    { "title": "TCDS AI/ML Training", "note": "Confirm details against your records before publishing." }
+  ],
+
+  "experience": [
+    { "title": "Infosys Virtual Internship 6.0", "type": "Virtual internship", "duration": "1 month",
+      "summary": "Worked on a digital civic engagement and petition platform.", "details": [] },
+    { "title": "Deloitte Forage Job Simulation", "type": "Virtual job simulation", "summary": "Add exact program title.", "details": [] },
+    { "title": "Tata Forage Job Simulation", "type": "Virtual job simulation", "summary": "Add exact program title.", "details": [] }
+  ],
+
+  "services": [
+    { "title": "Responsive Website Development", "description": "Fast, accessible, mobile-first websites." },
+    { "title": "React / Next.js Web Apps", "description": "Interactive web applications with modern tooling." },
+    { "title": "Flutter Android Apps", "description": "Native-feeling mobile apps built with Flutter." },
+    { "title": "AI-Powered App Prototypes", "description": "Integrating ML models and AI tools into practical applications." }
+  ]
+}
