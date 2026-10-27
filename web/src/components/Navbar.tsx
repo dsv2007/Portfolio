@@ -13,6 +13,7 @@ const links = [
   { label: "Skills", href: "/skills" },
   { label: "Projects", href: "/projects" },
   { label: "Certifications", href: "/certifications" },
+  { label: "Experience", href: "/experience" },
   { label: "Services", href: "/services" },
   { label: "Resume", href: "/resume" },
   { label: "Contact", href: "/contact" },
@@ -48,7 +49,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden items-center gap-1 xl:flex">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -71,7 +72,7 @@ export default function Navbar() {
           <ThemeToggle />
           <button
             type="button"
-            className="glass inline-flex h-10 w-10 items-center justify-center rounded-full lg:hidden"
+            className="glass inline-flex h-10 w-10 items-center justify-center rounded-full xl:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -86,7 +87,7 @@ export default function Navbar() {
       {open && (
         <ul
           id="mobile-menu"
-          className="mx-auto grid max-w-6xl gap-1 px-4 pb-4 sm:px-6 lg:hidden"
+          className="mx-auto grid max-w-6xl gap-1 px-4 pb-4 sm:px-6 xl:hidden"
         >
           {links.map((link) => (
             <li key={link.href}>
