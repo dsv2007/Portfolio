@@ -4,7 +4,7 @@ import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import { getProfile } from "@/lib/content";
 import Navbar from "@/components/Navbar";
-
+import { siteUrl } from "@/lib/site";
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
@@ -14,8 +14,21 @@ const jakarta = Plus_Jakarta_Sans({
 const profile = getProfile();
 
 export const metadata: Metadata = {
-  title: `${profile.name} | ${profile.roles[0]}`,
-  description: profile.intro.slice(0, 155),
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${profile.name} | ${profile.roles[0]}`,
+    template: `%s | ${profile.name}`,
+  },
+  description:
+    "Portfolio of Santhivarshini D, an AI and Data Science student building web and mobile applications. Projects, skills, certifications and contact details.",
+  openGraph: {
+    type: "website",
+    siteName: profile.name,
+    title: `${profile.name} | ${profile.roles[0]}`,
+    description:
+      "AI and Data Science student building intelligent web and mobile applications.",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
