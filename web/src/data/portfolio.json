@@ -19,17 +19,27 @@
     "intro": "I am an Artificial Intelligence and Data Science student passionate about building intelligent applications, responsive websites, and practical digital solutions. I enjoy using modern development technologies and AI-powered tools to transform ideas into useful web and mobile experiences. I am continuously improving my technical skills through projects, certifications, internships, and hands-on learning. I am open to suitable internships, freelance projects, collaborations, and opportunities to build impactful technology solutions.",
     "availability": "Open to internships, freelance projects and collaborations.",
     "photo": "assets/profile.jpg",
-    "resumeUrl": null,
+    "resumeUrl":"/resume.pdf",
     "contact": {
       "email": null,
       "phone": null,
       "location": "Coimbatore, Tamil Nadu, India"
     },
     "social": {
-      "github": null,
-      "linkedin": null
+      "github": "https://github.com/dsv2007",
+      "linkedin": "www.linkedin.com/in/santhivarshini-d-66b705324"
     }
   },
+
+  "contact": {
+  "email": "your-public-email@example.com",
+  "phone": null,
+  "location": "Coimbatore, Tamil Nadu, India"
+},
+"social": {
+  "github": "https://github.com/your-username",
+  "linkedin": "https://www.linkedin.com/in/your-profile"
+},
 
   "skills": [
     {
