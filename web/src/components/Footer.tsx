@@ -1,8 +1,12 @@
-import { getProfile } from "@/lib/content";
+import { getProfile, ensureHttps } from "@/lib/content";
 
 export default function Footer() {
   const profile = getProfile();
   const year = new Date().getFullYear();
+
+  const github = ensureHttps(profile.social.github);
+  const linkedin = ensureHttps(profile.social.linkedin);
+  const email = profile.contact.email;
 
   return (
     <footer className="mt-16 border-t border-line">
@@ -11,9 +15,9 @@ export default function Footer() {
           © {year} {profile.name}. All rights reserved.
         </p>
         <div className="flex gap-4">
-          {profile.social.github && (
+          {github && (
             <a
-              href={profile.social.github}
+              href={github}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-fg"
@@ -21,9 +25,9 @@ export default function Footer() {
               GitHub
             </a>
           )}
-          {profile.social.linkedin && (
+          {linkedin && (
             <a
-              href={profile.social.linkedin}
+              href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-fg"
@@ -31,8 +35,8 @@ export default function Footer() {
               LinkedIn
             </a>
           )}
-          {profile.contact.email && (
-            <a href={`mailto:${profile.contact.email}`} className="hover:text-fg">
+          {email && (
+            <a href={`mailto:${email}`} className="hover:text-fg">
               Email
             </a>
           )}

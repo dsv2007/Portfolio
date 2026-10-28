@@ -3,8 +3,7 @@ import { Code, Mail, MapPin, Link2 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
-import { getProfile } from "@/lib/content";
-
+import { getProfile, ensureHttps } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch about internships, freelance work or collaborations.",
@@ -13,8 +12,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const profile = getProfile();
   const { email, location } = profile.contact;
-  const { github, linkedin } = profile.social;
-
+const github = ensureHttps(profile.social.github);
+const linkedin = ensureHttps(profile.social.linkedin);
   return (
     <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <Reveal>

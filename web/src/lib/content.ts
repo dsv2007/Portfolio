@@ -12,3 +12,7 @@ export const getCertifications = () => content.certifications;
 export const getTraining = () => content.training;
 export const getExperience = () => content.experience;
 export const getServices = () => content.services;
+export function ensureHttps(url: string | null): string | null {
+  if (!url) return null;
+  return /^https?:\/\//i.test(url) ? url : `https://${url}`;
+}
